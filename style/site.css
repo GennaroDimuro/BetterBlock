@@ -160,7 +160,7 @@ header.navigation .nav-links ul li .logout-btn:hover {
     padding-top: 100px !important;
 }
 
-#jobs-container {
+#jobsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 20px;
