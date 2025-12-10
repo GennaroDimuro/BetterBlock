@@ -406,12 +406,6 @@ header.navigation .nav-links ul li a.admin-link:hover {
     margin: 0;
 }
 
-.specific-time  {
-    margin-top: 5px;
-    display: flex;
-    gap: 10px;
-}
-
 .form-group {
     margin-bottom: 15px;
 }
