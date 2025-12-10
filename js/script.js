@@ -104,7 +104,7 @@ function loginWithGoogle() {
 
 window.onload = function() {
     console.log("La página cargó completamente.");
-    Admin();
+    isAdmin();
 
     const container = document.getElementById("jobsContainer");
     jobs.forEach(job => {
