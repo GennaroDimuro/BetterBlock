@@ -160,6 +160,66 @@ header.navigation .nav-links ul li .logout-btn:hover {
     padding-top: 100px !important;
 }
 
+#jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px 100px;
+}
+
+.job-card {
+    border: 1px solid #ddd;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.job-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.job-title {
+    font-size: 1.2em;
+    color: #162938;
+    margin: 0;
+}
+
+.job-company {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.job-body p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.job-footer {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.apply-btn {
+    padding: 8px 16px;
+    background: #2bc7c7;
+    border: none;
+    color: #162938;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: rgba(56, 172, 180, 0.8);
+    color: #edf0f1;
+}
+
 /* Profile Page */
 
 .profile-page {
@@ -240,7 +300,7 @@ header.navigation .nav-links ul li .logout-btn:hover {
 
 .profile-options a {
     text-decoration: none;
-    color: #2bc7c7;
+    color: #adb0b0;
     font-weight: bold;
 }
 
