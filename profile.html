@@ -14,14 +14,19 @@
         <main class="container profile-page">
             <section class="left">
                 <a href="jobs.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Home </a>
-                <table id="jobsTable" class="jobs-table">
+                <table class="table is-fullwidth" id="taskList">
                     <thead>
-                        <tr>
-                            <th></th>
-                            <th>Trabajo</th>
-                            <th>Empresa</th>
-                            <th>Fecha</th>
-                        </tr>
+                        <th class="control">
+                            <button id="removeAllTasks" onclick="selectAll()">
+                                <span class="icon">
+                                    <i id="checkMark" class="fa-solid fa-square-check"></i>
+                                </span>
+                            </button>
+                        </th>
+                        <th>Task</th>
+                        <th>Assigned to</th>
+                        <th>Priority</th>
+                        <th>Due date</th>
                     </thead>
                     <tbody>
                         <tr>

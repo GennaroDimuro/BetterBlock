@@ -183,23 +183,6 @@ header.navigation .nav-links ul li .logout-btn:hover {
     font-weight: bold;
 }
 
-.jobs-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-}
-
-.jobs-table th, .jobs-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-.jobs-table th {
-    background: #162938;
-    color: #edf0f1;
-}
-
 .delete-btn {
     padding: 10px 20px;
     background: #e74c3c;
