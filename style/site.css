@@ -128,7 +128,7 @@ header.navigation .nav-links ul li a.main-nav::after {
     width: 100%;
     left: 0;
     bottom: -7px;
-    height: 2px;
+    height: 3px;
     background: #edf0f1 !important;
     border-radius: 5px;
     transform-origin: left;
