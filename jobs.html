@@ -8,21 +8,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="/BetterBlock/files/badge.png">
         <link rel="stylesheet" href="/BetterBlock/style/site.css">
+        <script src="https://kit.fontawesome.com/541b6877f4.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <main>
             <h2 class="title"> BetterBlock </h2>
-            <div class="jobs-container">
-                <h2 class="title is-3 mb-4"> Job Openings </h2>
-                <div class="job-listing">
-                    <h3 class="title is-4"> Community Manager </h3>
-                    <p> Responsible for managing and engaging with our community members. </p>
-                </div>
-                <div class="job-listing">
-                    <h3 class="title is-4"> Content Creator </h3>
-                    <p> Create engaging content for our social media platforms and website. </p>
-                </div>
-            </div>
+            <section>
+                <table class="table is-fullwidth" id="taskList">
+                    <thead>
+                        <th class="control">
+                            <button id="removeAllTasks" onclick="selectAll()">
+                                <span class="icon">
+                                    <i id="checkMark" class="fa-solid fa-square-check"></i>
+                                </span>
+                            </button>
+                        </th>
+                        <th>Task</th>
+                        <th>Assigned to</th>
+                        <th>Priority</th>
+                        <th>Due date</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
         <script src="/BetterBlock/js/script.js"></script>
     </body>
 </html>
