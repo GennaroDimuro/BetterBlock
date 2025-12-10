@@ -313,6 +313,11 @@ header.navigation .nav-links ul li a.admin-link:hover {
 
 /* Admin Page */
 
+.admins-page {
+    display: flex;
+    background: #f0f2f5;
+}
+
 #adminsContainer {
     display: flex;
     justify-content: center;
@@ -367,7 +372,7 @@ header.navigation .nav-links ul li a.admin-link:hover {
 
 .admin-footer {
     margin-top: 15px;
-    text-align: right;
+    text-align: left;
 }
 
 #datesContainer {
@@ -385,6 +390,7 @@ header.navigation .nav-links ul li a.admin-link:hover {
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     width: 100%;
+    min-width: 200px;
 }
 
 .date-header {
@@ -420,5 +426,5 @@ header.navigation .nav-links ul li a.admin-link:hover {
 
 .date-footer {
     margin-top: 15px;
-    text-align: right;
+    text-align: left;
 }
