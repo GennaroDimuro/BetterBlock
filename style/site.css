@@ -108,6 +108,7 @@ header.navigation .nav-logo {
 }
 
 header.navigation .nav-links ul li a.main-nav {
+    position: relative;
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1 !important;
@@ -132,7 +133,7 @@ header.navigation .nav-links ul li a.main-nav::after {
     transition: transform 0.5s;
 }
 
-header.navigation .nav-links ul li a.main-nav::after:hover {
+header.navigation .nav-links ul li a.main-nav:hover::after {
     transform: scaleX(1);
 }
 
