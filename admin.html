@@ -20,8 +20,7 @@
                             <h2 class="admin-title">Generate Task</h2>
                         </div>
                         <div class="admin-body">
-                            <form id="adminForm" action="/edit/admin" method="post" enctype="multipart/form-data">
-                                
+                            <form id="adminForm">         
                                 <div class="form-group">
                                     <label>Task</label>
                                     <input class="input" type="text" name="task_admin" placeholder="Task">
@@ -60,7 +59,7 @@
                                 </div>
 
                                 <div class="admin-footer">
-                                    <button class="apply-btn" type="submit">Create</button>
+                                    <button class="apply-btn" type="button">Create</button>
                                 </div>
                             </form>
                         </div>
@@ -77,8 +76,26 @@
                             <form id="dateForm" action="/edit/{{ date_id }}/date" method="post">
                                 
                                 <div class="form-group">
-                                    <label>Add a Date</label>
+                                    <label>Date</label>
                                     <input class="input" type="date" name="date_date" required>
+                                </div>
+
+                                <div class="specific-time">
+                                    <div class="form-group">
+                                        <label>Time</label>
+                                        <input class="input" type="time" name="time_date" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Hour</label>
+                                        <div class="hour-field">
+                                            <select name="hour_admin" class="select">
+                                                <option>A.M</option>
+                                                <option>P.M</option>
+                                            </select>
+                                            <input class="input" type="text" name="price_admin" placeholder="Amount">
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="date-footer">

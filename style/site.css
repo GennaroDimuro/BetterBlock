@@ -391,7 +391,7 @@ header.navigation .nav-links ul li a.admin-link:hover {
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     width: 100%;
-    min-width: 300px;
+    min-width: 350px;
 }
 
 .date-header {
@@ -404,6 +404,11 @@ header.navigation .nav-links ul li a.admin-link:hover {
     font-size: 1.2em;
     color: #162938;
     margin: 0;
+}
+
+.specific-time  {
+    margin-top: 5px;
+    display: flex;
 }
 
 .form-group {
