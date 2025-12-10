@@ -98,7 +98,7 @@
     background: #24252a;
 }
 
-.main-nav {
+.navigation a {
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1 !important;
@@ -114,7 +114,7 @@
     padding: 0px 20px;
 }
 
-.logout-btn {
+.navigation a .logout-btn {
     padding: 9px 25px;
     background-color: linear-gradient(90deg, #0020bd, #2032c1);
     border: none;
