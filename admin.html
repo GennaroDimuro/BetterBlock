@@ -17,24 +17,19 @@
                 <div id="adminsContainer">
                     <div class="admin-card">
                         <div class="admin-header">
-                            <h2 class="admin-title">Add Admin</h2>
+                            <h2 class="admin-title">Generate Task</h2>
                         </div>
                         <div class="admin-body">
                             <form id="adminForm" action="/edit/admin" method="post" enctype="multipart/form-data">
                                 
                                 <div class="form-group">
-                                    <label>Admin Title</label>
-                                    <input class="input" type="text" name="title_admin" placeholder="Title">
+                                    <label>Task</label>
+                                    <input class="input" type="text" name="task_admin" placeholder="Task">
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Subtitle</label>
-                                    <input class="input" type="text" name="subtitle_admin" placeholder="Subtitle">
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Image</label>
-                                    <input class="file-input" type="file" name="image_admin" required>
+                                    <label>Issued by</label>
+                                    <input class="input" type="text" name="issued_by_admin" placeholder="Issued by">
                                 </div>
 
                                 <div class="form-group">
@@ -43,7 +38,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Price</label>
+                                    <label>Salary</label>
                                     <div class="price-field">
                                         <select name="currency_admin" class="select">
                                             <option>$</option>
@@ -55,17 +50,17 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Copyright</label>
-                                    <input class="input" type="text" name="copy_admin" placeholder="Copyright">
+                                    <label>Voluntary</label>
+                                    <input class="input" type="text" name="voluntary_admin" placeholder="yes/no">
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Notes</label>
-                                    <textarea class="textarea" name="notes_admin" placeholder="Add a comment..."></textarea>
+                                    <label>Description</label>
+                                    <textarea class="textarea" name="description_admin" placeholder="Add a description..."></textarea>
                                 </div>
 
                                 <div class="admin-footer">
-                                    <button class="apply-btn" type="submit">Add Admin</button>
+                                    <button class="apply-btn" type="submit">Create</button>
                                 </div>
                             </form>
                         </div>
