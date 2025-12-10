@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> BetterBlock </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="/BetterBlock/files/badge.png">
+        <link rel="stylesheet" href="/BetterBlock/style/site.css">
+        <script src="https://kit.fontawesome.com/541b6877f4.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main>
+            <div id="adminsContainer">
+                <div class="admin-card">
+                    <div class="admin-header">
+                        <h2 class="admin-title">Add Admin</h2>
+                    </div>
+                    <div class="admin-body">
+                        <form id="adminForm" action="/edit/admin" method="post" enctype="multipart/form-data">
+                            
+                            <div class="form-group">
+                                <label>Admin Title</label>
+                                <input class="input" type="text" name="title_admin" placeholder="Title">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Subtitle</label>
+                                <input class="input" type="text" name="subtitle_admin" placeholder="Subtitle">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input class="file-input" type="file" name="image_admin" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input class="input" type="text" name="location_admin" placeholder="Location">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Price</label>
+                                <div class="price-field">
+                                    <select name="currency_admin" class="select">
+                                        <option>$</option>
+                                        <option>£</option>
+                                        <option>€</option>
+                                    </select>
+                                    <input class="input" type="text" name="price_admin" placeholder="Amount">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Copyright</label>
+                                <input class="input" type="text" name="copy_admin" placeholder="Copyright">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Notes</label>
+                                <textarea class="textarea" name="notes_admin" placeholder="Add a comment..."></textarea>
+                            </div>
+
+                            <div class="admin-footer">
+                                <button class="apply-btn" type="submit">Add Admin</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="/BetterBlock/js/script.js"></script>
+    </body>
+</html>

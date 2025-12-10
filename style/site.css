@@ -310,3 +310,63 @@ header.navigation .nav-links ul li a.admin-link:hover {
 .profile-options a:hover {
     color: #162938;
 }
+
+/* Admin Page */
+
+#adminsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 20px;
+    padding: 20px 100px;
+}
+
+.admin-card {
+    border: 1px solid #ddd;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.admin-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.admin-title {
+    font-size: 1.3em;
+    color: #162938;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 0.9em;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input, .textarea, .select, .file-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.price-field {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-footer {
+    margin-top: 15px;
+    text-align: right;
+}

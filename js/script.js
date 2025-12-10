@@ -86,6 +86,7 @@ function deleteSelected() {
 
 function addTask(task, assigned, priority, dueDate) {
         const tbody = document.getElementById('taskList');
+        if (!tbody) return;
         const tr = document.createElement('tr');
 
         tr.innerHTML = `
