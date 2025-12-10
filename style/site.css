@@ -92,17 +92,18 @@
 /* Jobs */
 
 .navigation {
+    position: fixed;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px 100px;
+    padding: 15px 100px;
     background: #162938;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);;
 }
 
 header.navigation .nav-logo {
     cursor: pointer;
     color: #fff;
-    font-size: 2rem;
     user-select: none;
     margin-right: auto;
 }
