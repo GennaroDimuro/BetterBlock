@@ -43,6 +43,18 @@ function createJobCard(job) {
     return card;
 }
 
+const ADMIN_GOOGLE_ID = "1234567890abcdef";
+
+const currentGoogleId = "1234567890abcdef";
+
+function isAdmin() {
+    if (currentGoogleId === ADMIN_GOOGLE_ID) {
+        const navList = document.getElementById("navList");
+        const li = document.createElement("li");
+        li.innerHTML = `<a class="main-nav" href="/BetterBlock/admin.html"> Admin </a>`;
+        navList.appendChild(li);
+    }
+};
 
 function selectAll() {
     const checkboxes = document.querySelectorAll('#taskList tbody input[type="checkbox"]');
@@ -92,6 +104,7 @@ function loginWithGoogle() {
 
 window.onload = function() {
     console.log("La página cargó completamente.");
+    Admin();
 
     const container = document.getElementById("jobsContainer");
     jobs.forEach(job => {
