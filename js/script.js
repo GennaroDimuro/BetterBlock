@@ -2,18 +2,18 @@
 
 const jobs = [
     {
-        title: "Desarrollador Backend",
+        title: "Backend Developer",
         company: "TechCorp",
-        priority: "Alta",
+        priority: "High",
         dueDate: "15/12/2025",
-        description: "Desarrollo de APIs con Flask y SQLAlchemy."
+        description: "Develop APIs with Flask and SQLAlchemy."
     },
     {
-        title: "Diseñador UI",
+        title: "UI Designer",
         company: "Designify",
-        priority: "Media",
+        priority: "Medium",
         dueDate: "20/12/2025",
-        description: "Diseño de interfaces limpias usando Bulma."
+        description: "Design clean interfaces using Bulma."
     }
 ];
 
@@ -27,17 +27,17 @@ function createJobCard(job) {
             <span class="job-company">${job.company}</span>
         </div>
         <div class="job-body">
-            <p><strong>Prioridad:</strong> ${job.priority}</p>
-            <p><strong>Fecha límite:</strong> ${job.dueDate}</p>
-            <p><strong>Descripción:</strong> ${job.description}</p>
+            <p><strong>Priority:</strong> ${job.priority}</p>
+            <p><strong>Due Date:</strong> ${job.dueDate}</p>
+            <p><strong>Description:</strong> ${job.description}</p>
         </div>
         <div class="job-footer">
-            <button class="apply-btn">Registrarme</button>
+            <button class="apply-btn">Register</button>
         </div>
     `;
 
     card.querySelector(".apply-btn").addEventListener("click", () => {
-        alert(`Te registraste al trabajo: ${job.title}`);
+        alert(`You registered for the job: ${job.title}`);
     });
 
     return card;
