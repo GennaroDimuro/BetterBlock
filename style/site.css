@@ -155,3 +155,7 @@ header.navigation .nav-links ul li .logout-btn:hover {
     background-color: rgba(56, 172, 180, 0.8);
     color: #edf0f1 !important;
 }
+
+main.section-jobs {
+    margin-top: 100px;
+}
