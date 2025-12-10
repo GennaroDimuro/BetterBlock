@@ -57,7 +57,7 @@ function isAdmin() {
 };
 
 function selectAll() {
-    const checkboxes = document.querySelectorAll('#taskList tbody input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('#taskList input[type="checkbox"]');
     const icon = document.getElementById('checkMark');
     const allChecked = Array.from(checkboxes).every(cb => cb.checked);
 
@@ -73,7 +73,7 @@ function selectAll() {
 }
 
 function deleteSelected() {
-    const rows = document.querySelectorAll('#taskList tbody tr');
+    const rows = document.querySelectorAll('#taskList tr');
     rows.forEach(row => {
         const checkbox = row.querySelector('input[type="checkbox"]');
         if (checkbox && checkbox.checked) {
@@ -83,7 +83,7 @@ function deleteSelected() {
 }
 
 function addTask(task, assigned, priority, dueDate) {
-        const tbody = document.querySelector('#taskList');
+        const tbody = document.getElementById('taskList');
         const tr = document.createElement('tr');
 
         tr.innerHTML = `
