@@ -159,3 +159,102 @@ header.navigation .nav-links ul li .logout-btn:hover {
 .structure {
     padding-top: 100px !important;
 }
+
+/* Profile Page */
+
+.left {
+    width: 70%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: inset -1px 0 0 #ddd;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #2bc7c7;
+    font-weight: bold;
+}
+
+.jobs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.jobs-table th, .jobs-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.jobs-table th {
+    background: #162938;
+    color: #edf0f1;
+}
+
+.delete-btn {
+    padding: 10px 20px;
+    background: #e74c3c;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.right {
+    width: 30%;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.profile-card {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.username {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #162938;
+}
+
+.bio {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.profile-options {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-options li {
+    margin: 10px 0;
+}
+
+.profile-options a {
+    text-decoration: none;
+    color: #2bc7c7;
+    font-weight: bold;
+}
+
+.profile-options a:hover {
+    color: #162938;
+}
