@@ -119,7 +119,7 @@ header.navigation .nav-links ul li {
     padding: 0px 20px;
 }
 
-header.navigation .logout-btn {
+header.navigation .nav-links ul li .logout-btn {
     padding: 9px 25px;
     background: linear-gradient(90deg, #0020bd, #5c69cb);
     border: none;
@@ -129,6 +129,6 @@ header.navigation .logout-btn {
     transition: all 0.3s ease 0s;
 }
 
-header.navigation .logout-btn:hover {
+header.navigation .nav-links ul li .logout-btn:hover {
     background: linear-gradient(90deg, #5e6cd8, #0020bd);
 }
