@@ -162,6 +162,12 @@ header.navigation .nav-links ul li .logout-btn:hover {
 
 /* Profile Page */
 
+.profile-page {
+    display: flex;
+    min-height: 100vh;
+    background: #f0f2f5;
+}
+
 .left {
     width: 70%;
     padding: 20px;
