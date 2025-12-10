@@ -330,7 +330,7 @@ header.navigation .nav-links ul li a.admin-link:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0px 20px;
     width: 100%;
     min-width: 800px;
 }
