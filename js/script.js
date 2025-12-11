@@ -17,6 +17,12 @@ const jobs = [
     }
 ];
 
+const tasks = [
+  { id: 1, title: "Develop API", issuedBy: "TechCorp" },
+  { id: 2, title: "Design UI", issuedBy: "Designify" }
+];
+
+
 const ADMIN_GOOGLE_ID = "1234567890abcdef";
 
 const currentGoogleId = "1234567890abcdef";
@@ -45,6 +51,35 @@ function createJobCard(job) {
     });
 
     return card;
+}
+
+function createTaskCard(task) {
+  const card = document.createElement("div");
+  card.className = "task-card";
+
+  card.innerHTML = `
+    <div class="task-info">
+      <i class="fa-solid fa-clipboard-list"></i> Task: ${task.title}<br>
+      <i class="fa-solid fa-user"></i> Issued by: ${task.issuedBy}
+    </div>
+    <div class="buttons">
+      <a href="/edit/task/${task.id}" class="button is-warning is-outlined">
+        <span>Edit</span>
+        <span class="icon is-small">
+          <i class="fa-solid fa-pen"></i>
+        </span>
+      </a>
+      <form action="/delete/task/${task.id}" method="post" style="display:inline;">
+        <button type="submit" class="button is-danger is-outlined">
+          <span>Delete</span>
+          <span class="icon is-small">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+      </form>
+    </div>
+  `;
+  return card;
 }
 
 function isAdmin() {
@@ -115,6 +150,19 @@ window.onload = function() {
             const card = createJobCard(job);
             container.appendChild(card);
         });
+    }
+
+    const taskContainer = document.getElementById("tasksContainer");
+
+    if (taskContainer) {
+        if (tasks.length === 0) {
+            taskContainer.innerHTML = `<p class="has-text-centered mt-5 subtitle is-5">No tasks assigned yet</p>`;
+        } else {
+            tasks.forEach(task => {
+            const card = createTaskCard(task);
+            taskContainer.appendChild(card);
+            });
+        }
     }
 
     addTask('Develop API', 'TechCorp', 'Low', '2025-12-15');
