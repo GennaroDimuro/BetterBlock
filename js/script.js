@@ -129,7 +129,7 @@ function createUserCard(user) {
     </div>
   `;
 
-  card.querySelector(".delete-btn").addEventListener("click", () => {
+  card.querySelector("..delete-user-btn").addEventListener("click", () => {
     alert(`User ${user.name} deleted`);
     card.remove();
   });
