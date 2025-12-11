@@ -17,6 +17,23 @@ const jobs = [
     }
 ];
 
+const users = [
+  {
+    name: "Alice Johnson",
+    photo: "https://via.placeholder.com/50",
+    email: "alice@example.com",
+    googleId: "alice123",
+    description: "Frontend developer"
+  },
+  {
+    name: "Bob Smith",
+    photo: "https://via.placeholder.com/50",
+    email: "bob@example.com",
+    googleId: "bob456",
+    description: "Backend engineer"
+  }
+];
+
 const tasks = [
   { id: 1, title: "Develop API", issuedBy: "TechCorp", members: ["Alice", "Bob", "Charlie"]},
   { id: 2, title: "Design UI", issuedBy: "Designify", members: ["Diana", "Eve"]}
@@ -93,6 +110,34 @@ function createTaskCard(task) {
   return card;
 }
 
+function createUserCard(user) {
+  const card = document.createElement("div");
+  card.className = "user-card";
+
+  card.innerHTML = `
+    <div class="user-header">
+      <div class="user-profile">
+        <img src="${user.photo}" alt="${user.name}" class="user-photo">
+        <h3 class="user-name">${user.name}</h3>
+      </div>
+      <button class="delete-btn" title="Delete User">&times;</button>
+    </div>
+    <div class="user-body">
+      <p><strong>Email:</strong> ${user.email}</p>
+      <p><strong>Google ID:</strong> ${user.googleId}</p>
+      <p><strong>Description:</strong> ${user.description}</p>
+    </div>
+  `;
+
+  card.querySelector(".delete-btn").addEventListener("click", () => {
+    alert(`User ${user.name} deleted`);
+    card.remove();
+  });
+
+  return card;
+}
+
+
 function isAdmin() {
     if (currentGoogleId === ADMIN_GOOGLE_ID) {
         const navList = document.getElementById("navList");
@@ -163,6 +208,14 @@ window.onload = function() {
         });
     }
 
+    const UserCont = document.getElementById("usersContainer");
+    if (UserCont) {
+        users.forEach(user => {
+            const card = createUserCard(user);
+            UserCont.appendChild(card);
+        });
+    }
+    
     const taskContainer = document.getElementById("tasksContainer");
 
     if (taskContainer) {
