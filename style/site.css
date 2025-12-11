@@ -465,6 +465,12 @@ header.navigation .nav-links ul li a.admin-link:hover {
     text-align: left;
 }
 
+#alertEmptyTask, #alertEmptyIssuedBy, 
+#alertEmptyVoluntary, #alertEmptyDate, #alertEmptyTime {
+  display: none;
+  font-size: 0.9em;
+}
+
 .Tasks-edition {
     padding: 50px 100px 20px 100px;
 }

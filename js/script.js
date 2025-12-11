@@ -34,12 +34,6 @@ const users = [
   }
 ];
 
-const tasks = [
-  { id: 1, title: "Develop API", issuedBy: "TechCorp", members: ["Alice", "Bob", "Charlie"]},
-  { id: 2, title: "Design UI", issuedBy: "Designify", members: ["Diana", "Eve"]}
-];
-
-
 const ADMIN_GOOGLE_ID = "1234567890abcdef";
 
 const currentGoogleId = "1234567890abcdef";
@@ -70,7 +64,73 @@ function createJobCard(job) {
     return card;
 }
 
-function createTaskCard(task) {
+function addTask() {
+    let Tasktitle = document.querySelector("#title").value;
+    let TaskIssuedBy = document.querySelector("#issuedby").value;
+    let TaskLocation = document.querySelector("#location").value;
+
+    let TaskSalary = document.querySelector("#salary").value;
+    let TaskAmount = document.querySelector("#amount").value;
+
+    let FullSalary = TaskSalary + TaskAmount;
+
+    let TaskVoluntary = document.querySelector("#voluntary").value;
+    let TaskDescription = document.querySelector("#description").value;
+
+    let alertT = document.querySelector("#alertEmptyTask");
+    let alertI = document.querySelector("#alertEmptyIssuedBy");
+    let alertV = document.querySelector("#alertEmptyVoluntary");
+
+    alertT.style.display = "none";
+    alertI.style.display = "none";
+    alertV.style.display = "none";
+
+    let valid = true;
+
+    if (Tasktitle === "") {
+        alertT.className = "help is-danger";
+        alertT.style.display = "block";
+        valid = false;
+    } else {
+        alertT.className = "help";
+        alertT.style.display = "none";
+    }
+
+    if (TaskIssuedBy === "") {
+        alertI.className = "help is-danger";
+        alertI.style.display = "block";
+        valid = false;
+    } else {
+        alertI.className = "help";
+        alertI.style.display = "none";
+    }
+
+    if (TaskVoluntary === "") {
+        alertV.className = "help is-danger";
+        alertV.style.display = "block";
+        valid = false;
+    } else {
+        alertV.className = "help";
+        alertV.style.display = "none";
+    }
+
+    if (!valid) return;
+
+    const task = {
+        title: Tasktitle,
+        issuedBy: TaskIssuedBy,
+        location: TaskLocation,
+        salary: TaskSalary + TaskAmount,
+        voluntary: TaskVoluntary,
+        description: TaskDescription,
+        members: ["None"]
+    };
+    
+    const card = addCardTask(task);
+    document.getElementById("tasksContainer").appendChild(card);
+}
+
+function addCardTask(task) {
   const card = document.createElement("div");
   card.className = "task-card";
 
@@ -214,19 +274,6 @@ window.onload = function() {
             const card = createUserCard(user);
             UserCont.appendChild(card);
         });
-    }
-
-    const taskContainer = document.getElementById("tasksContainer");
-
-    if (taskContainer) {
-        if (tasks.length === 0) {
-            taskContainer.innerHTML = `<p class="has-text-centered mt-5 subtitle is-5">No tasks assigned yet</p>`;
-        } else {
-            tasks.forEach(task => {
-            const card = createTaskCard(task);
-            taskContainer.appendChild(card);
-            });
-        }
     }
 
     addTask('Develop API', 'TechCorp', 'Low', '2025-12-15');

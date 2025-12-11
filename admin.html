@@ -27,43 +27,46 @@
                                 <form id="adminForm">         
                                     <div class="form-group">
                                         <label>Task</label>
-                                        <input class="input" type="text" name="task_admin" placeholder="Task">
+                                        <input id="title" class="input" type="text" name="task_admin" placeholder="Task">
+                                        <p id="alertEmptyTask">Task field is required</p>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Issued by</label>
-                                        <input class="input" type="text" name="issued_by_admin" placeholder="Issued by">
+                                        <input id="issuedby" class="input" type="text" name="issued_by_admin" placeholder="Issued by">
+                                        <p id="alertEmptyIssuedBy">Issued by field is required</p>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Location</label>
-                                        <input class="input" type="text" name="location_admin" placeholder="Location">
+                                        <input id="location" class="input" type="text" name="location_admin" placeholder="Location">
                                     </div>
 
                                     <div class="form-group">
                                         <label>Salary</label>
                                         <div class="price-field">
-                                            <select name="currency_admin" class="select">
+                                            <select id="salary" name="currency_admin" class="select">
                                                 <option>$</option>
                                                 <option>£</option>
                                                 <option>€</option>
                                             </select>
-                                            <input class="input" type="text" name="price_admin" placeholder="Amount">
+                                            <input id="amount" class="input" type="text" name="price_admin" placeholder="Amount">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Voluntary</label>
-                                        <input class="input" type="text" name="voluntary_admin" placeholder="yes/no">
+                                        <input id="voluntary" class="input" type="text" name="voluntary_admin" placeholder="yes/no">
+                                        <p id="alertEmptyVoluntary">Voluntary field is required</p>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <textarea class="textarea" name="description_admin" placeholder="Add a description..."></textarea>
+                                        <textarea id="description" class="textarea" name="description_admin" placeholder="Add a description..."></textarea>
                                     </div>
 
                                     <div class="admin-footer">
-                                        <button class="apply-btn" type="button">Create</button>
+                                        <button class="apply-btn" type="button" onclick="addTask()">Create</button>
                                     </div>
                                 </form>
                             </div>
@@ -81,11 +84,13 @@
                                     <div class="form-group">
                                         <label>Date</label>
                                         <input class="input" type="date" name="date_date" required>
+                                        <p id="alertEmptyDate">Date field is required</p>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Time</label>
                                         <input class="input" type="time" name="time_date" required>
+                                        <p id="alertEmptyTime">Time field is required</p>
                                     </div>
 
                                     <div class="date-footer">
