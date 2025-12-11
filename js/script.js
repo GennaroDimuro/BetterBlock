@@ -59,9 +59,10 @@ function createTaskCard(task) {
 
   card.innerHTML = `
     <div class="task-info">
-      <i class="fa-solid fa-clipboard-list"></i> Task: ${task.title}<br>
-      <i class="fa-solid fa-user"></i> Issued by: ${task.issuedBy}
+        <span class="task-title">Task: ${task.title}</span>
+        <span class="task-issued">Issued by: ${task.issuedBy}</span>
     </div>
+
     <div class="buttons">
         <button type="submit" class="button is-warning is-outlined">
             <span>Edit</span>
