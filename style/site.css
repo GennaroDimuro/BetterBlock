@@ -232,7 +232,8 @@ header.navigation .nav-links ul li a.admin-link:hover {
     font-size: 0.95em;
     color: #333;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
     gap: 10px;
 }
 
