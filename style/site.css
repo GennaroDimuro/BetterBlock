@@ -524,6 +524,19 @@ header.navigation .nav-links ul li a.admin-link:hover {
   margin-left: 10px;
 }
 
+.delete-task-btn {
+    padding: 10px 20px;
+    background: #e74c3c;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-task-btn:hover {
+    background: #c0392b;
+}
+
 /* Users Management Page */
 
 .users-page {

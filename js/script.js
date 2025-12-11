@@ -126,6 +126,8 @@ function addTask() {
     
     const card = addCardTask(task);
     document.getElementById("tasksContainer").appendChild(card);
+
+    document.getElementById("adminForm").reset();
 }
 
 function addCardTask(task) {
@@ -157,7 +159,7 @@ function addCardTask(task) {
                 <i class="fa-solid fa-pen"></i>
             </span>
         </button>
-        <button type="submit" class="delete-btn">
+        <button type="submit" class="delete-task-btn">
             <span>Delete</span>
             <span class="icon is-small">
                 <i class="fas fa-times"></i>
@@ -165,6 +167,17 @@ function addCardTask(task) {
         </button>
     </div>
   `;
+
+    card.querySelector(".delete-task-btn").addEventListener("click", () => {
+        card.remove();
+
+        const taskContainer = document.getElementById("tasksContainer");
+        if (taskContainer.children.length === 0) {
+            taskContainer.innerHTML =
+                `<p class="has-text-centered mt-5 subtitle is-5">No tasks assigned yet</p>`;
+        }
+    });
+
   return card;
 }
 
