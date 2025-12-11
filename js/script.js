@@ -72,8 +72,6 @@ function addTask() {
     let TaskSalary = document.querySelector("#salary").value;
     let TaskAmount = document.querySelector("#amount").value;
 
-    let FullSalary = TaskSalary + TaskAmount;
-
     let TaskVoluntary = document.querySelector("#voluntary").value;
     let TaskDescription = document.querySelector("#description").value;
 
@@ -235,7 +233,7 @@ function deleteSelected() {
     });
 }
 
-function addTask(task, assigned, priority, dueDate) {
+function addTaskTest(task, assigned, priority, dueDate) {
         const tbody = document.getElementById('taskList');
         if (!tbody) return;
         const tr = document.createElement('tr');
@@ -276,7 +274,7 @@ window.onload = function() {
         });
     }
 
-    addTask('Develop API', 'TechCorp', 'Low', '2025-12-15');
-    addTask('Design UI', 'Designify', 'Medium', '2025-12-20');
+    addTaskTest('Develop API', 'TechCorp', 'Low', '2025-12-15');
+    addTaskTest('Design UI', 'Designify', 'Medium', '2025-12-20');
 
 };
