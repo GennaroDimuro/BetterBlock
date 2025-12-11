@@ -191,7 +191,7 @@ function addTask(task, assigned, priority, dueDate) {
     }
 
 function loginWithGoogle() {
-    const backendUrl = "http://127.0.0.1:5000/auth/login";
+    const backendUrl = "https://css330-finalproject.onrender.com/auth/login";
 
     window.location.href = backendUrl;
 }
