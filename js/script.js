@@ -20,14 +20,14 @@ const jobs = [
 const users = [
   {
     name: "Alice Johnson",
-    photo: "https://via.placeholder.com/50",
+    photo: "files/profile.jpg",
     email: "alice@example.com",
     googleId: "alice123",
     description: "Frontend developer"
   },
   {
     name: "Bob Smith",
-    photo: "https://via.placeholder.com/50",
+    photo: "files/profile.jpg",
     email: "bob@example.com",
     googleId: "bob456",
     description: "Backend engineer"
@@ -215,7 +215,7 @@ window.onload = function() {
             UserCont.appendChild(card);
         });
     }
-    
+
     const taskContainer = document.getElementById("tasksContainer");
 
     if (taskContainer) {
