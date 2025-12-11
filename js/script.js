@@ -18,8 +18,8 @@ const jobs = [
 ];
 
 const tasks = [
-  { id: 1, title: "Develop API", issuedBy: "TechCorp" },
-  { id: 2, title: "Design UI", issuedBy: "Designify" }
+  { id: 1, title: "Develop API", issuedBy: "TechCorp", members: ["Alice", "Bob", "Charlie"]},
+  { id: 2, title: "Design UI", issuedBy: "Designify", members: ["Diana", "Eve"]}
 ];
 
 
@@ -57,10 +57,22 @@ function createTaskCard(task) {
   const card = document.createElement("div");
   card.className = "task-card";
 
+  const membersOptions = task.members.map(member => 
+    `<option value="${member}">${member}</option>`
+  ).join("");
+
+
   card.innerHTML = `
     <div class="task-info">
         <span class="task-title">Task: ${task.title}</span>
         <span class="task-issued">Issued by: ${task.issuedBy}</span>
+        <span class="task-members">
+            Members:
+            <select class="members-select">
+                ${membersOptions}
+            </select>
+        </span>
+
     </div>
 
     <div class="buttons">
