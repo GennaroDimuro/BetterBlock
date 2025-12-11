@@ -63,20 +63,18 @@ function createTaskCard(task) {
       <i class="fa-solid fa-user"></i> Issued by: ${task.issuedBy}
     </div>
     <div class="buttons">
-      <a href="/edit/task/${task.id}" class="button is-warning is-outlined">
-        <span>Edit</span>
-        <span class="icon is-small">
-          <i class="fa-solid fa-pen"></i>
-        </span>
-      </a>
-      <form action="/delete/task/${task.id}" method="post" style="display:inline;">
-        <button type="submit" class="delete-btn">
-          <span>Delete</span>
-          <span class="icon is-small">
-            <i class="fas fa-times"></i>
-          </span>
+        <button type="submit" class="button is-warning is-outlined">
+            <span>Edit</span>
+            <span class="icon is-small">
+                <i class="fa-solid fa-pen"></i>
+            </span>
         </button>
-      </form>
+        <button type="submit" class="delete-btn">
+            <span>Delete</span>
+            <span class="icon is-small">
+                <i class="fas fa-times"></i>
+            </span>
+        </button>
     </div>
   `;
   return card;
