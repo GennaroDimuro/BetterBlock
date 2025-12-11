@@ -70,7 +70,7 @@ function createTaskCard(task) {
         </span>
       </a>
       <form action="/delete/task/${task.id}" method="post" style="display:inline;">
-        <button type="submit" class="button is-danger is-outlined">
+        <button type="submit" class="delete-btn">
           <span>Delete</span>
           <span class="icon is-small">
             <i class="fas fa-times"></i>
