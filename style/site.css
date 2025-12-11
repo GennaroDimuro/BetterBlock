@@ -224,11 +224,9 @@ header.navigation .nav-links ul li a.admin-link:hover {
 }
 
 .message-box {
-    border: 1px solid #ddd;
-    background: #fff;
+    background: transparent;
     padding: 20px;
     margin: 20px 100px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     font-size: 0.95em;
     color: #333;
     text-align: center; 
@@ -241,7 +239,6 @@ header.navigation .nav-links ul li a.admin-link:hover {
 }
 
 .message-link {
-    align-self: flex-end;
     padding: 8px 16px;
     background: #2bc7c7;
     border: none;
