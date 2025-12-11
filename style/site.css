@@ -461,8 +461,8 @@ header.navigation .nav-links ul li a.admin-link:hover {
     text-align: left;
 }
 
-#tasksContainer {
-  padding: 20px 100px;
+.Tasks-edition {
+    padding: 50px 100px 20px 100px;
 }
 
 .task-card {
