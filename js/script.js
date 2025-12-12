@@ -304,30 +304,27 @@ function createUserCard(user) {
 
   return card;
 }
+
 async function deleteUserApi(userId) {
     const url = `https://css330-finalproject.onrender.com/users/${userId}`;
     try {
         const response = await fetch(url, {
             method: 'DELETE',
-            // Render needs your cookies/session info to validate the Mayor status!
-            credentials: 'include' 
+            credentials: 'include'
         });
 
         if (response.ok) {
             alert(`User ${userId} deleted successfully from database.`);
-            // Remove the card visually only AFTER the API confirms success
-            document.getElementById('usersContainer').querySelector(`[data-user-id="${userId}"]`).remove();
-        } else if (response.status === 403) {
-            alert("Permission Denied: Only the Mayor can delete users.");
         } else {
             const errorData = await response.json();
             alert(`Failed to delete user: ${errorData.error}`);
         }
     } catch (err) {
         console.error('Error deleting user:', err);
-        alert('An network error occurred.');
+        alert('A network error occurred.');
     }
 }
+
 
 function isAdmin() {
     if (currentGoogleId === ADMIN_GOOGLE_ID) {
