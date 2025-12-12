@@ -529,6 +529,12 @@ header.navigation .nav-links ul li a.admin-link:hover {
   color: #555;
 }
 
+.task-date, .task-time {
+    padding: 4px 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
 .buttons .button {
   margin-left: 10px;
 }

@@ -75,13 +75,20 @@ function addTask() {
     let TaskVoluntary = document.querySelector("#voluntary").value;
     let TaskDescription = document.querySelector("#description").value;
 
+    let TaskDate = document.querySelector("#date").value;
+    let TaskTime = document.querySelector("#time").value;
+
     let alertT = document.querySelector("#alertEmptyTask");
     let alertI = document.querySelector("#alertEmptyIssuedBy");
     let alertV = document.querySelector("#alertEmptyVoluntary");
+    let alertD = document.querySelector("#alertEmptyDate");
+    let alertTi = document.querySelector("#alertEmptyTime");
 
     alertT.style.display = "none";
     alertI.style.display = "none";
     alertV.style.display = "none";
+    alertD.style.display = "none";
+    alertTi.style.display = "none";
 
     let valid = true;
 
@@ -112,6 +119,24 @@ function addTask() {
         alertV.style.display = "none";
     }
 
+    if (TaskDate === "") {
+        alertD.className = "help is-danger";
+        alertD.style.display = "block";
+        valid = false;
+    } else {
+        alertD.className = "help";
+        alertD.style.display = "none";
+    }
+
+    if (TaskTime === "") {
+        alertTi.className = "help is-danger";
+        alertTi.style.display = "block";
+        valid = false;
+    } else {
+        alertTi.className = "help";
+        alertTi.style.display = "none";
+    }
+
     if (!valid) return;
 
     const task = {
@@ -121,6 +146,8 @@ function addTask() {
         salary: TaskSalary + TaskAmount,
         voluntary: TaskVoluntary,
         description: TaskDescription,
+        date: TaskDate,
+        time: TaskTime,
         members: ["None"]
     };
     
@@ -133,6 +160,7 @@ function addTask() {
     parent.appendChild(card);
 
     document.getElementById("adminForm").reset();
+    document.getElementById("dateForm").reset();
 }
 
 function addCardTask(task) {
@@ -154,8 +182,8 @@ function addCardTask(task) {
                 ${membersOptions}
             </select>
         </span>
-
-    </div>
+        <span class="task-date">Date: ${task.date}</span>
+        <span class="task-time">Time: ${task.time}</span>
 
     <div class="buttons">
         <button type="submit" class="button is-warning is-outlined">
