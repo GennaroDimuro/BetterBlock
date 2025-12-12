@@ -288,9 +288,9 @@ function createUserCard(user) {
 
   card.querySelector(".delete-user-btn").addEventListener("click", () => {
 
-    card.remove();
     const userIdToDelete = user.id;
     deleteUserApi(userIdToDelete);
+    card.remove();
 
     const usersContainer = document.getElementById("usersContainer");
     const msgContainer = document.getElementById("msg-box");
