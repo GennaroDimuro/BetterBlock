@@ -257,8 +257,9 @@ function createUserCard(user) {
   card.querySelector(".delete-user-btn").addEventListener("click", () => {
     card.remove();
 
+    const usersContainer = document.getElementById("usersContainer");
     const msgContainer = document.getElementById("msg-box");
-        if (msgContainer.children.length === 0) {
+        if (usersContainer.children.length === 0) {
             msgContainer.innerHTML =`
                 <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
                     No users registered
