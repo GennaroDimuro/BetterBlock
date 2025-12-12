@@ -16,24 +16,6 @@ const jobs = [
         description: "Design clean interfaces using Bulma."
     }
 ];
-
-const users = [
-  {
-    name: "Alice Johnson",
-    photo: "files/profile.jpg",
-    email: "alice@example.com",
-    googleId: "alice123",
-    description: "Frontend developer"
-  },
-  {
-    name: "Bob Smith",
-    photo: "files/profile.jpg",
-    email: "bob@example.com",
-    googleId: "bob456",
-    description: "Backend engineer"
-  }
-];
-
 const ADMIN_GOOGLE_ID = "1234567890abcdef";
 
 const currentGoogleId = "1234567890abcdef";
@@ -154,8 +136,14 @@ function addTask() {
     const card = addCardTask(task);
     const parent = document.getElementById("tasksContainer");
 
-    const msg = document.getElementById("no-tasks-message");
-    if (msg) msg.remove();
+    if (parent) {
+        if (parent.children.length === 0) {
+            parent.innerHTML = `
+                <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
+                    No tasks assigned yet
+                </p>`;
+        }
+    }
 
     parent.appendChild(card);
 
@@ -272,7 +260,6 @@ function createUserCard(user) {
   `;
 
   card.querySelector(".delete-user-btn").addEventListener("click", () => {
-    alert(`User ${user.name} deleted`);
     card.remove();
 
     const usersContainer = document.getElementById("usersContainer");
@@ -349,17 +336,6 @@ function loginWithGoogle() {
 window.onload = function() {
     isAdmin();
     fetchUsers();
-
-    const taskContainer = document.getElementById("tasksContainer");
-
-    if (taskContainer) {
-        if (taskContainer.children.length === 0) {
-            taskContainer.innerHTML = `
-                <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
-                    No tasks assigned yet
-                </p>`;
-        }
-    }
 
     const container = document.getElementById("jobsContainer");
     if (container) {
