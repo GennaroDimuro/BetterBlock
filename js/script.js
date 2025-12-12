@@ -125,7 +125,12 @@ function addTask() {
     };
     
     const card = addCardTask(task);
-    document.getElementById("tasksContainer").appendChild(card);
+    const parent = document.getElementById("tasksContainer");
+
+    const msg = document.getElementById("no-tasks-message");
+    if (msg) msg.remove();
+
+    parent.appendChild(card);
 
     document.getElementById("adminForm").reset();
 }
@@ -174,7 +179,7 @@ function addCardTask(task) {
         const taskContainer = document.getElementById("tasksContainer");
         if (taskContainer.children.length === 0) {
             taskContainer.innerHTML =
-                `<p class="has-text-centered mt-5 subtitle is-5">No tasks assigned yet</p>`;
+                `<p class="no-tasks-message">No tasks available. Please add a new task.</p>`;
         }
     });
 
@@ -270,6 +275,17 @@ function loginWithGoogle() {
 window.onload = function() {
     console.log("La página cargó completamente.");
     isAdmin();
+
+    const taskContainer = document.getElementById("tasksContainer");
+
+    if (taskContainer) {
+        if (taskContainer.children.length === 0) {
+            taskContainer.innerHTML = `
+                <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
+                    No tasks assigned yet
+                </p>`;
+        }
+    }
 
     const container = document.getElementById("jobsContainer");
     if (container) {

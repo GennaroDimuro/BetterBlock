@@ -471,6 +471,15 @@ header.navigation .nav-links ul li a.admin-link:hover {
   font-size: 0.9em;
 }
 
+#no-tasks-message {
+    margin: 0;
+    color: #333333;
+    font-weight: 300;
+    padding-bottom: 15px;
+    font-size: 0.95em;
+    text-align: center;
+}
+
 .Tasks-edition {
     padding: 50px 100px 20px 100px;
 }
