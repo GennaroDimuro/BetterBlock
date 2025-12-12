@@ -234,6 +234,13 @@ async function fetchUsers() {
             container.appendChild(card);
             });
 
+            if (container.children.length === 0) {
+                container.innerHTML = `
+                <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
+                No users registered
+                </p>`;
+            }
+
 
             return data;
         } else {
@@ -267,6 +274,14 @@ function createUserCard(user) {
   card.querySelector(".delete-user-btn").addEventListener("click", () => {
     alert(`User ${user.name} deleted`);
     card.remove();
+
+    const usersContainer = document.getElementById("usersContainer");
+        if (usersContainer.children.length === 0) {
+            usersContainer.innerHTML =`
+                <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
+                    No users registered
+                </p>`;
+        }
   });
 
   return card;
