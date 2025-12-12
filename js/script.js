@@ -1,22 +1,5 @@
 'use strict';
 
-const jobs = [
-    {
-        title: "Backend Developer",
-        company: "TechCorp",
-        priority: "High",
-        dueDate: "15/12/2025",
-        description: "Develop APIs with Flask and SQLAlchemy."
-    },
-    {
-        title: "UI Designer",
-        company: "Designify",
-        priority: "Medium",
-        dueDate: "20/12/2025",
-        description: "Design clean interfaces using Bulma."
-    }
-];
-
 const ADMIN_GOOGLE_ID = "1234567890abcdef";
 
 const currentGoogleId = "1234567890abcdef";
@@ -427,14 +410,6 @@ window.onload = function() {
                     No tasks assigned yet
                 </p>`;
         }
-    }
-
-    const container = document.getElementById("jobsContainer");
-    if (container) {
-        jobs.forEach(job => {
-            const card = createJobCard(job);
-            container.appendChild(card);
-        });
     }
 
     addTaskTest('Develop API', 'TechCorp', 'Low', '2025-12-15');
