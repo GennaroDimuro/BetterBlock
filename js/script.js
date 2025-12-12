@@ -304,7 +304,6 @@ function loginWithGoogle() {
 }
 
 window.onload = function() {
-    console.log("La página cargó completamente.");
     isAdmin();
 
     const taskContainer = document.getElementById("tasksContainer");
