@@ -216,8 +216,9 @@ async function fetchUsers() {
             container.appendChild(card);
             });
 
+            const msgContainer = document.getElementById("msg-box");
             if (container.children.length === 0) {
-                container.innerHTML = `
+                msgContainer.innerHTML = `
                 <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
                 No users registered
                 </p>`;
@@ -256,9 +257,9 @@ function createUserCard(user) {
   card.querySelector(".delete-user-btn").addEventListener("click", () => {
     card.remove();
 
-    const usersContainer = document.getElementById("usersContainer");
-        if (usersContainer.children.length === 0) {
-            usersContainer.innerHTML =`
+    const msgContainer = document.getElementById("msg-box");
+        if (msgContainer.children.length === 0) {
+            msgContainer.innerHTML =`
                 <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
                     No users registered
                 </p>`;
