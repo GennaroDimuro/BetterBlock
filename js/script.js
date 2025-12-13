@@ -31,12 +31,14 @@ async function renderTasks() {
     const tasks = await fetchTasks();
 
     if (jobsContainer) {
+        jobsContainer.innerHTML = "";
         tasks.forEach(task => {
             jobsContainer.appendChild(createJobCard(task));
         });
     }
 
     if (tasksContainer) {
+        tasksContainer.innerHTML = "";
         if (tasks.length === 0) {
             tasksContainer.innerHTML = `
                 <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
@@ -419,17 +421,6 @@ window.onload = function() {
     isAdmin();
     fetchUsers();
     renderTasks();
-
-    const taskContainer = document.getElementById("tasksContainer");
-
-    if (taskContainer) {
-        if (taskContainer.children.length === 0) {
-            taskContainer.innerHTML = `
-                <p id="no-tasks-message" class="has-text-centered mt-5 subtitle is-5">
-                    No tasks assigned yet
-                </p>`;
-        }
-    }
 
     addTaskTest('Develop API', 'TechCorp', 'Low', '2025-12-15');
     addTaskTest('Design UI', 'Designify', 'Medium', '2025-12-20');
