@@ -160,13 +160,12 @@ function addTask() {
 
     const task = {
         title: Tasktitle,
-        issuedBy: TaskIssuedBy,
+        issued: TaskIssuedBy,
         location: TaskLocation,
         salary: FullSalary,
         voluntary: TaskVoluntary,
         description: TaskDescription,
         deadline: Taskdeadline,
-        members: ["None"]
     };
     
     const card = addCardTask(task);
@@ -186,21 +185,10 @@ function addCardTask(task) {
   const card = document.createElement("div");
   card.className = "task-card";
 
-  const membersOptions = task.members.map(member => 
-    `<option value="${member}">${member}</option>`
-  ).join("");
-
-
   card.innerHTML = `
     <div class="task-info">
         <span class="task-title">Task: ${task.title}</span>
         <span class="task-issued">Issued by: ${task.issued}</span>
-        <span class="task-members">
-            Members:
-            <select class="members-select">
-                ${membersOptions}
-            </select>
-        </span>
         <span class="task-date">Date: ${task.deadline.slice(0, 10)}</span>
         <span class="task-time">Time: ${task.deadline.slice(11, 16)}</span>
     </div>
