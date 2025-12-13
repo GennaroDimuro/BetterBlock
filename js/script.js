@@ -163,8 +163,7 @@ function addTask() {
         salary: FullSalary,
         voluntary: TaskVoluntary,
         description: TaskDescription,
-        date: TaskDate,
-        time: TaskTime,
+        deadline: Taskdeadline,
         members: ["None"]
     };
     
